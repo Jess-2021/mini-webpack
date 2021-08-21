@@ -27,5 +27,5 @@ function getDeps(temp, { deps }) {
   })
 }
 
-const content = parseModules('./src/index.js')
+const content = exports.default('./src/index.js')
 console.log('content',content)
