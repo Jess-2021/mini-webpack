@@ -4,7 +4,7 @@ const parser = require("@babel/parser");
 const traverse = require("@babel/traverse").default;
 const babel = require("@babel/core");
 
-function getModuleCode(file) {
+exports.default = function getModuleCode(file) {
   // 读取文件
   const body = fs.readFileSync(file, 'utf-8')
 
@@ -33,5 +33,5 @@ function getModuleCode(file) {
   return moduleInfo
 }
 
-const code = getModuleCode('./src/add.js') // 针对于根目录下
-console.log("code", code)
+// const code = getModuleCode('./src/add.js') // 针对于根目录下
+// console.log("code", code)
