@@ -2,7 +2,8 @@ var fs = require('fs')
 var parseModules = require('./parseModules').default
 
 function bundle(file) {
-  const depsGraph = JSON.stringify(parseModules(file))
+  const depsGraph = JSON.stringify(parseModules(file), null, 2)
+
   return `(function (graph) {
     function require(file) {
         function absRequire(relPath) {
